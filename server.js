@@ -11,12 +11,13 @@ app.use(express.json());
 app.get('/weather/:city', async (req, res) => {
   try {
     const city = req.params.city;
-    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=demo&units=metric`);
+    const response = await axios.get(`https://wttr.in/${city}?format=j1`);
+    const data = response.data;
     res.json({
-      city: response.data.name,
-      temperature: Math.round(response.data.main.temp),
-      description: response.data.weather[0].description,
-      humidity: response.data.main.humidity
+      city: city,
+      temperature: Math.round(data.current_condition[0].temp_C),
+      description: data.current_condition[0].weatherDesc[0].value,
+      humidity: data.current_condition[0].humidity
     });
   } catch (error) {
     res.status(404).json({ error: 'City not found or API error' });
