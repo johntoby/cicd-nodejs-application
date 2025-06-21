@@ -39,7 +39,7 @@ npm install
 npm start
 ```
 
-The application will be available at `http://localhost:3000`
+The application will be available at `http://localhost:4000`
 
 ## Docker
 
@@ -50,7 +50,7 @@ The application will be available at `http://localhost:3000`
 docker build -t username/weather-app .
 
 # Run container
-docker run -p 3000:3000 username/weather-app
+docker run -p 4000:4000 username/weather-app
 ```
 
 ## AWS Deployment
@@ -60,7 +60,7 @@ docker run -p 3000:3000 username/weather-app
 1. **AWS Account** with ECR repository created
 2. **EC2 Instance** with:
    - Docker installed
-   - Security group allowing port 3000
+   - Security group allowing port 4000
    - IAM role or AWS CLI configured
 
 ### GitHub Secrets Required
@@ -81,7 +81,7 @@ The CI/CD pipeline automatically:
 1. Builds Docker image on push to main branch
 2. Pushes image to AWS ECR
 3. Deploys to EC2 instance
-4. Runs application on port 3000
+4. Runs application on port 4000
 
 ## Project Structure
 
