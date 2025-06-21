@@ -50,4 +50,4 @@ jobs:
           sudo docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           sudo docker stop weather-app || true
           sudo docker rm weather-app || true
-          sudo docker run -d --name weather-app -p 3000:3000 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          sudo docker run -d --name weather-app -p 4000:4000 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
