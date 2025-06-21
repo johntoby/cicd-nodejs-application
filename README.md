@@ -53,6 +53,8 @@ docker build -t username/weather-app .
 docker run -p 4000:4000 username/weather-app
 ```
 
+![app running on port 4000](<Screenshot (649).png>)
+
 ## AWS Deployment
 
 ### Prerequisites
@@ -82,6 +84,12 @@ The CI/CD pipeline automatically:
 2. Pushes image to AWS ECR
 3. Deploys to EC2 instance
 4. Runs application on port 4000
+
+![pipeline running sucessfully](<Screenshot (648).png>)
+
+
+![success pipeline](<Screenshot (647).png>)
+
 
 ## Project Structure
 
