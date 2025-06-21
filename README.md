@@ -1,6 +1,6 @@
 # Weather App - A Node.js Application
 
-A simple weather application built with Node.js and Express that displays weather conditions for any city. The application includes a complete CI/CD pipeline for deployment to AWS EC2 using Docker and ECR.
+A simple weather application built with Node.js and Express that displays weather conditions for any city. The application includes a complete CI/CD pipeline for automated deployment of the application to AWS EC2 using Docker, with the image automatically built and stored in a private Elastic Container Registry (ECR) repository. 
 
 ## Features
 
@@ -30,7 +30,7 @@ A simple weather application built with Node.js and Express that displays weathe
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd cicd-nodejs-application
+cd nodejs-weather-application
 
 # Install dependencies
 npm install
@@ -122,3 +122,5 @@ The CI/CD pipeline automatically:
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
+
+## Application and devops pipeline built and created by Johntoby. 
